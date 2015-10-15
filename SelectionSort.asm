@@ -13,3 +13,5 @@ input:
 	li $v0, 4			# Load string into opcode by
 	syscall
 	
+
+test
