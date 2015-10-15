@@ -1,17 +1,15 @@
 
 .data
-prompt: .asciiz "Input your name: \n"
+prompt: .asciiz "Input your name: \n"	# Prompt user for input
+input: .asciiz "          "		# 10 character string
 .text
 .globl main
 
 main:
 
-	j input
+	j userinput			# Call user 
 
-input:
+userinput:
 	la $a0, prompt			# Load prompt into address 0
 	li $v0, 4			# Load string into opcode by
-	syscall
-	
-
-test
+	syscall				# Initialize system call for jump
